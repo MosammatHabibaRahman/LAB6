@@ -169,3 +169,36 @@ function DegreeCheck()
         document.getElementById('msg5').innerHTML = "SSC must be selected.";
     }
 }
+
+function BloodGroupCheck()
+{
+    var bg = document.getElementById('bg').value;
+
+    if(bg == "")
+    {
+        document.getElementById('msg6').innerHTML = "Blood Group cannot be Null.";
+    }
+    else
+    {
+        alert("Blood Group: "+bg);
+    }
+}
+
+function FileCheck()
+{
+    var userid = document.getElementById('userid').value;
+    var pic = document.getElementById('pic').value;
+
+    if(userid == "" || userid <= 0)
+    {
+        document.getElementById('msg7').innerHTML = "User id field cannot be empty or negetive.";
+    }
+    else if(pic == "")
+    {
+        document.getElementById('msg7').innerHTML = "Picture field cannot be empty.";
+    }
+    else
+    {
+        alert("User Id: "+userid);
+    }
+}
