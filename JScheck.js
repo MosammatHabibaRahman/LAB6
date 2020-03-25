@@ -43,10 +43,10 @@ function ValidCheck()
     {
         document.getElementById('msg').innerHTML = "Invalid input!";
     }
-    /* else if(str_word_count(name) < 2)
+    else if(!name.includes(" "))
     {
         document.getElementById('msg').innerHTML = "Name field must contain two words!";
-    } */
+    }
     else
     {
         document.getElementById('msg').innerHTML = "Name Submitted!";
