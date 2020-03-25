@@ -88,3 +88,84 @@ function EmailCheck()
         alert("Email Submission Successful!");
     }
 }
+
+function GenderCheck()
+{
+    if(!document.getElementById('male').checked && !document.getElementById('female').checked && !document.getElementById('other').checked)
+    {
+        document.getElementById('msg3').innerHTML = "Gender cannot be Null.";
+    }
+    else if(document.getElementById('male').checked)
+    {
+        alert("Gender: Male");
+        var gender = document.getElementById('male').value;
+    }
+    else if(document.getElementById('female').checked)
+    {
+        alert("Gender: Female");
+        var gender = document.getElementById('female').value;
+    }
+    else
+    {
+        alert("Gender: Other");
+        var gender = document.getElementById('other').value;
+    }
+}
+
+function DateRangeCheck(d,m,y)
+{
+    if(d >= 1 && d <= 31 && m >= 1 && m <= 12 && y >= 1900 && y <= 2016)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+function DateCheck()
+{
+    var day = document.getElementById('day').value;
+    var month = document.getElementById('month').value;
+    var year = document.getElementById('year').value;
+
+    if(day == "" || month == "" || year == "")
+    {
+        document.getElementById('msg4').innerHTML = "Date cannot be Null.";
+    }
+    else if(!DateRangeCheck(day,month,year))
+    {
+        document.getElementById('msg4').innerHTML = "Invalid Input";
+    }
+    else
+    {
+        alert("Date Submission Successful!");
+    }
+}
+
+function DegreeCheck()
+{
+    if(document.getElementById('ssc').checked && !document.getElementById('hsc').checked && !document.getElementById('bsc').checked)
+    {
+        alert("Degree: SSC");
+        var ssc = document.getElementById('ssc').value;
+    }
+    else if(document.getElementById('ssc').checked && document.getElementById('hsc').checked && !document.getElementById('bsc').checked)
+    {
+        alert("Degree: SSC & HSC");
+        var ssc = document.getElementById('ssc').value;
+        var hsc = document.getElementById('hsc').value;
+    }
+    else if(document.getElementById('ssc').checked && document.getElementById('hsc').checked && document.getElementById('bsc').checked)
+    {
+        alert("Degree: SSC, HSC & BSc");
+        var ssc = document.getElementById('ssc').value;
+        var hsc = document.getElementById('hsc').value;
+        var bsc = document.getElementById('bsc').value;
+    }
+    else
+    {
+        document.getElementById('msg5').innerHTML = "SSC must be selected.";
+    }
+}

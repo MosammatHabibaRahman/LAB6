@@ -8,14 +8,17 @@
                 <td>
                     <fieldset style = "width:200px">
                         <legend>Gender</legend>
-                        <input id = "male" type = "radio" name = "" value = "Male"/> Male
-                        <input id = "female" type = "radio" name = "" value = "Female"/> Female
-                        <input id = "other" type = "radio" name = "" value = "Other"/> Other
+                        <input id = "male" type = "radio" name = "gender" value = "Male"/> Male
+                        <input id = "female" type = "radio" name = "gender" value = "Female"/> Female
+                        <input id = "other" type = "radio" name = "gender" value = "Other"/> Other
                     </fieldset>
                 </td>
             </tr>
             <tr>
-                <td><input id = "" type = "submit" name = "submit" value = "Submit"/></td>
+                <td><input id = "" type = "submit" name = "submit3" value = "Submit" onclick="GenderCheck()"/></td>
+            </tr>
+            <tr>
+                <td><h5 id = "msg3" style="color: red;"></h5></td>
             </tr>
         </table>
     </body>
